@@ -6,4 +6,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="5.0.1" />
+    <PackageReference Include="MahApps.Metro" Version="2.0.0-alpha0531" />
+    <PackageReference Include="ReactiveUI.WPF" Version="10.5.7" />
+  </ItemGroup>
+
 </Project>
