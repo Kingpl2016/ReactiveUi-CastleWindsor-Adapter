@@ -1,8 +1,7 @@
 ﻿<Application x:Class="ReactiveUiCastleWindsorAdapter.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ReactiveUiCastleWindsorAdapter"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Views\ShellView.xaml">
     <Application.Resources>
          
     </Application.Resources>
