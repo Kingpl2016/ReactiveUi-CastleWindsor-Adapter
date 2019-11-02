@@ -13,15 +13,17 @@
 
 namespace ReactiveUiCastleWindsorAdapter.Views
 {
+    using System.Windows;
     using System.Reactive.Disposables;
+    
     using ReactiveUI;
     using ViewModels;
-    using System.Windows;
+    using MahApps.Metro.Controls;
 
     /// <summary>
     ///     Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class ShellView : Window, IViewFor<ShellViewModel>
+    public partial class ShellView : MetroWindow, IViewFor<ShellViewModel>
     {
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register("ViewModel",
             typeof(ShellViewModel), typeof(ShellView), new PropertyMetadata(null));

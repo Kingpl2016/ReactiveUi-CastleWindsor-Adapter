@@ -20,11 +20,16 @@ namespace ReactiveUiCastleWindsorAdapter.Installer
     using Castle.Windsor;
     using Castle.MicroKernel.Registration;
     using Castle.MicroKernel.SubSystems.Configuration;
+    using MahApps.Metro.Controls.Dialogs;
 
     public class UiInstaller : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
+            container.Register(Component.For<IDialogCoordinator>()
+                                        .ImplementedBy<DialogCoordinator>()
+                                        .LifeStyle.Is(LifestyleType.Singleton));
+
             container.Register(Classes.FromAssembly(Assembly.GetExecutingAssembly())
                                       .BasedOn(typeof(IViewFor<>))
                                       .WithServiceSelf()
