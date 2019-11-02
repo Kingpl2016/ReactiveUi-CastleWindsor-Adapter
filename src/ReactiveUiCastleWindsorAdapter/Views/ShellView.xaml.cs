@@ -26,10 +26,10 @@ namespace ReactiveUiCastleWindsorAdapter.Views
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register("ViewModel",
             typeof(ShellViewModel), typeof(ShellView), new PropertyMetadata(null));
 
-        public ShellView()
+        public ShellView(ShellViewModel viewModel)
         {
             this.InitializeComponent();
-            this.ViewModel = new ShellViewModel();
+            this.ViewModel = viewModel;
 
             this.WhenActivated(d =>
             {
