@@ -36,6 +36,7 @@ namespace ReactiveUiCastleWindsorAdapter.Views
             this.WhenActivated(d =>
             {
                 this.OneWayBind(this.ViewModel, vm => vm.HelloWorld, view => view.TestLabel.Content).DisposeWith(d);
+                this.OneWayBind(this.ViewModel, vm => vm.StatusBar, view => view.StatusBarHost.ViewModel).DisposeWith(d);
             });
         }
 

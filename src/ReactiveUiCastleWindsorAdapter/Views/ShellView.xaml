@@ -1,11 +1,12 @@
 ﻿<mah:MetroWindow x:Class="ReactiveUiCastleWindsorAdapter.Views.ShellView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-        mc:Ignorable="d"
-        Title="I love MahApps" Height="450" Width="800">
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                xmlns:reactiveUi="http://reactiveui.net"
+                mc:Ignorable="d"
+                Title="I love MahApps" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -15,5 +16,10 @@
         </Grid.RowDefinitions>
 
         <Label x:Name="TestLabel" Grid.Row="0" />
+
+        <reactiveUi:ViewModelViewHost x:Name="StatusBarHost"  
+                                      Grid.Row="3" 
+                                      VerticalContentAlignment="Stretch" 
+                                      HorizontalContentAlignment="Stretch" />
     </Grid>
 </mah:MetroWindow>

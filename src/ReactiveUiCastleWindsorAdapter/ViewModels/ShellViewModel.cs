@@ -17,8 +17,9 @@ namespace ReactiveUiCastleWindsorAdapter.ViewModels
 
     public class ShellViewModel : ReactiveObject
     {
-        public ShellViewModel()
+        public ShellViewModel(StatusBarViewModel statusBarViewModel)
         {
+            this.StatusBar = statusBarViewModel;
             this.HelloWorld = "ReactiveUi is working :)";
         }
 
@@ -27,6 +28,13 @@ namespace ReactiveUiCastleWindsorAdapter.ViewModels
         {
             get => this.helloWorld;
             private set => this.RaiseAndSetIfChanged(ref this.helloWorld, value);
+        }
+
+        private StatusBarViewModel statusBar;
+        public StatusBarViewModel StatusBar
+        {
+            get => this.statusBar;
+            set => this.RaiseAndSetIfChanged(ref this.statusBar, value);
         }
     }
 }
