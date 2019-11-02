@@ -30,12 +30,13 @@ namespace ReactiveUiCastleWindsorAdapter.Common
             this.container = new WindsorContainer();
         }
 
-        public void Setup()
+        public Bootstrapper Setup()
         {
             Locator.SetLocator(new CastleWindsorDependencyResolver(this.container));
             Locator.CurrentMutable.InitializeSplat();
             Locator.CurrentMutable.InitializeReactiveUI();
             this.container.Install(FromAssembly.Named("ReactiveUiCastleWindsorAdapter"));
+            return this;
         }
 
         public void DisplayRootView()

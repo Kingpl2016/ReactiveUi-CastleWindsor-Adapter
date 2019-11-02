@@ -25,8 +25,7 @@ namespace ReactiveUiCastleWindsorAdapter
 
         public App()
         {
-            this.bootstrapper = new Bootstrapper();
-            this.bootstrapper.Setup();
+            this.bootstrapper = new Bootstrapper().Setup();
         }
 
         protected override void OnStartup(StartupEventArgs e)
